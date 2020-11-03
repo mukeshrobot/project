@@ -1,0 +1,15 @@
+{% extends 'nav.html' %}
+    
+{% block content %}
+
+
+<p>{{user.username}}  is login</p>
+
+<form action="" method="POST">
+    {%csrf_token%}
+
+    <input type="submit" value="logout">
+</form>
+
+
+{%endblock%}

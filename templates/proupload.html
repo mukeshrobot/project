@@ -1,0 +1,36 @@
+{% extends 'nav.html' %}
+    
+{% block content %}
+
+<form action=""enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+ProductModel NO: <input type="text" name='proname'>
+<select name="procategory">
+    <option>Home Appliences</option>
+    <option>Electronics</option>
+    <option>Glocerys</option>
+    <option value="">Auto Mobiles</option>
+</select>
+
+
+<select name="probrand" id="">
+    <option value="">Samsung </option>
+    <option value="">Mi</option>
+    <option value="">LG</option>
+    <option value="">Videocon</option>
+    <option value="">Other</option>
+</select>
+
+proprice: <input type="text" name="proprice">
+files: <input type="file" name="files" multiple/><br>
+prospecification: <input type="text" name="prospecification">
+Discription: <input type="text" name="discription">
+<input type="submit" value="submit">
+
+
+
+</form>
+
+
+
+{% endblock%}

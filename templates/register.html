@@ -1,0 +1,43 @@
+{% extends 'nav.html' %}
+    
+{% block content %}
+
+
+<form action="" method="POST" style="text-align: right;">
+    {% csrf_token %}
+
+
+    <table style="text-align: right;">
+        <tr><td><label for="first_name">First Name</label>
+            <input type="text" name="firstname" id="first_name" placeholder="firstname"> &nbsp;
+            </td><td><label for="last_name">Last Name</label>
+                <input type="text" id="last_name" name="lastname" placeholder="last name"> <br>
+                </td></tr><br>
+                <tr><td><label for="username">Username</label>
+                    <input type="text" name="username" id="username" placeholder="username">
+                    </td><td><label for="password1">Password</label>
+                        <input type="password" name="password1" id="password1" placeholder="password"> <br>&nbsp;
+                        </td></tr>
+                        <tr><td><label for="password2">Password</label>
+                            <input type="password" name="password2" id="password2" placeholder="enter same password "> 
+                            </td><td><label for="email">Email</label>
+                                <input type="email" name="email" id="email"placeholder="arya@yahoo.com" ><br>
+                                </td></tr>
+                                <tr><td><label for="mobile">Mobile No</label>
+                                    <input type="text" name="mobileno" id="mobileno" placeholder="mobile no">  <br>
+                                </td><br>
+                                <td><input type="submit" value="Register">  </td>
+                                </tr>
+                                
+    </table>
+
+    
+
+    
+
+
+
+</form>
+
+
+{%endblock%}

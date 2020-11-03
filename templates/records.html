@@ -1,0 +1,17 @@
+{% extends 'nav.html' %}
+    
+    {% block content %}
+    <center>
+
+<table style="color :green;">
+<tr>
+    <th>name</th><th>lastname</th><th>email</th><th>mobile no</th>
+</tr>
+{% for rec in data%}
+<tr><td>{{rec.name}}</td><td>{{rec.lastname}}</td><td>{{rec.email}}</td><td>{{rec.mobileno}}</td></tr>
+{%endfor%}
+</table>    
+
+</center>
+
+    {% endblock%}

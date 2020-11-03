@@ -1,0 +1,43 @@
+
+    {% extends 'nav.html' %}
+    
+    {% block content %}
+    
+
+
+    
+    <center><h1 style="color :green;">Sign-Up</h1> <br>&nbsp</br>
+        
+    <form action="" style="color:white;" method="POST">
+        {% csrf_token %}
+
+
+        <table>
+            <tr>
+                
+               firstname: <input type="text" name="firstname" placeholder="enter first name">&nbsp&nbsp
+                <select name="lastname" id="">
+                    <option >shiva</option>
+                    <option >krishna</option>
+                    </option>
+                </select>
+               
+                
+                
+            </tr><br>
+            </tr><br>
+            <tr>
+                
+                email:<input type="email" name="email">&nbsp
+                
+                mobileno:<input type="text" name="mobileno"><br> <br>
+                <input type="submit" value="Register">
+
+            </tr>
+        </table>
+        <br>&nbsp&nbsp&nbsp </br>
+        
+
+    </form></center>
+
+    {% endblock %}
