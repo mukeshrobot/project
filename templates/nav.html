@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css.css' %}" >
+    <link rel="stylesheet" href="{% static 'bootstrap' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link active" href="/homepage/">Home <span class="sr-only">(current)</span></a>
+            </div>
+          
+        </div>
+        
+        
+
+          {% if user.is_authenticated %}
+          
+           <p style="color:green;font-size: xx-large; font:message-box;"> 
+            <div class="card">
+              <div class="card-body">
+                <img src="https://www.iconsdb.com/icons/preview/green/circle-xxl.png" width="13" alt="no image">
+                
+               Hello  {{user.username}}
+               
+               <script>
+                var x="Hello   "+"{{user.username}}" +"  welcome";
+          alert(x);
+        </script>
+                
+               
+                
+            </div>
+            </p> &nbsp;&nbsp;&nbsp;&nbsp;
+          <a href="/logout/" class="btn btn-danger">Logout</a>
+          {% else %}
+          <a href="/login/" class="btn btn-success">Sign in</a> &nbsp;&nbsp;<br>    </br>
+          <a href="/register/" class="btn btn-primary">Sign up</a>
+          {% endif %}
+          
+      
+      </nav>
+      
+</head>
+<body>
+  <p id="name"></p>
+  <script>
+    var y=20;
+    document.getElementById("name").innerHTML=y+50;
+  
+  </script>
+</div>
+
+    
+    {% block content %}
+    
+    {% endblock %}
+</body>
+</html>

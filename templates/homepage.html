@@ -1,0 +1,53 @@
+
+{% extends 'nav.html' %}
+    
+{% block content %}
+{%load static%}
+
+
+    <div>
+        <p id="id"></p>
+        <script>
+            var x=new Date(new Date());
+            document.getElementById("id").innerHTML=x;
+        </script>
+        {% for rec in data %}
+        <form action="">
+            
+        <table>
+            
+            
+            <tr><th>{{rec.id}}</th><p><th><tr><td width="1"> {% if rec.fil %} <img src="{{rec.fil.url}}"  class="rounded float-left" width="20%"  alt="no image">{%else%} <p>No Images Found</p>{%endif%}</td>
+            </th> <th><td>{{rec.prodiscription}}</td></th></p></tr>
+
+            <tr><td style="text-align: right;">quantity: <input type="number" width="2"  name="quantity">  </td><td><center>{{rec.proprice}}</center></td></tr>
+
+            <tr><center><th width="100%">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{rec.proname}}</th></center><th><a href="/cart/{{rec.id}}"><input type="button" value="Add cart"></a></th></tr>
+            
+        
+        </table>
+    </form> 
+        {%endfor%}
+    </div>
+
+
+
+
+<!--
+
+
+
+    
+    
+
+    <td><td>{{rec.procategory}}</td></td></tr>
+    <tr><td></td><td><td></td><td>addcart</td></td></tr>
+        
+        
+        
+        </tr>
+
+           -->
+</table>
+{%endblock%}
+
